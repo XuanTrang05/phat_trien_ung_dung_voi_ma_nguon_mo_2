@@ -164,6 +164,7 @@ Vào: http://localhost:8000 - > sẽ thấy: Danh sách con nợ chưa trả
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90363eab-b10b-4c66-a128-2f35403c14ae" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49a3412e-a1b4-4019-9adb-dcd58fee9b1b" />
 - Public website bằng Cloudflare Tunnel
-- 
-
+   > - đã có container: cloudflared nên giờ chỉ cần cấu hình tunnel.
+   > - Kiểm tra cloudflared đang chạy: docker logs cloudflared
+   > - 
 
