@@ -40,12 +40,29 @@ Hướng dẫn:
    > - Dockerfile dùng để build container Django.
 Đi vào thư mục django_app : cd django_app
 Tạo file Dockerfile: sudo nano Dockerfile
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cc94bd43-9111-451b-b037-da4f03266a5b" />
 
 - TẠO requirements.txt
 > - Tạo file requirements.txt : sudo nano requirements.txt
 <img width="742" height="905" alt="image" src="https://github.com/user-attachments/assets/18a12588-1a89-41ee-970b-4884862e467a" />
 
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cc94bd43-9111-451b-b037-da4f03266a5b" />
+- TẠO docker-compose.yml
+  > -  Quay lại thư mục gốc : cd
+  > -  Tạo docker-compose.yml: sudo nano docker-compose.yml
+<img width="747" height="905" alt="image" src="https://github.com/user-attachments/assets/11feb0e3-d923-44d0-9c52-c13fd3542697" />
 
+- BUILD VÀ CHẠY
+ > - Build project: sudo docker compose up -d --build
+      >  - Docker sẽ:
+>          tải MariaDB
+>          tải PhpMyAdmin
+>          build Django
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/ce5b458b-0149-4097-8717-e4ffa34a0502" />
+
+> - Kiểm tra container
+>      sudo docker ps
+
+<img width="1652" height="415" alt="image" src="https://github.com/user-attachments/assets/df2889c8-2453-462e-b4d1-b80e3360c4a6" />
 
 
