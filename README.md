@@ -166,5 +166,15 @@ Vào: http://localhost:8000 - > sẽ thấy: Danh sách con nợ chưa trả
 - Public website bằng Cloudflare Tunnel
    > - đã có container: cloudflared nên giờ chỉ cần cấu hình tunnel.
    > - Kiểm tra cloudflared đang chạy: docker logs cloudflared
-   > - 
+   <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4415790e-91e9-49fb-9740-0f209fe6cae7" />
+- Lấy domain tunnel tạm thời
+Chạy: docker exec -it cloudflared sh
+- Sau đó trong container: cloudflared tunnel --url http://host.docker.internal:8000
+- Sửa file: nano django_app/config/settings.py
+<img width="371" height="137" alt="image" src="https://github.com/user-attachments/assets/fa04c2c6-a909-4011-8926-cc05146ca045" />
+sau khi sửa xong Restart Django container: docker restart django_camdo
 
+# test 
+- mở https://web.hoangthixuantrang.id.vn
+<img width="1179" height="966" alt="image" src="https://github.com/user-attachments/assets/5b7335bf-1481-4bca-9ccd-bee86f929d61" />
+<img width="720" height="418" alt="image" src="https://github.com/user-attachments/assets/6d3c0e50-a55c-44d8-8771-94b83a61dd8e" />
