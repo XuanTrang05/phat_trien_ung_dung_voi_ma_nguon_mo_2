@@ -63,6 +63,44 @@ Tạo file Dockerfile: sudo nano Dockerfile
 > - Kiểm tra container
 >      sudo docker ps
 
-<img width="1652" height="415" alt="image" src="https://github.com/user-attachments/assets/df2889c8-2453-462e-b4d1-b80e3360c4a6" />
+<img width="1647" height="408" alt="image" src="https://github.com/user-attachments/assets/97ae5656-114f-4122-b9b7-b38bc8449bc6" />
+
+- Tạo app Cầm đồ
+> - Tạo app : sudo docker compose exec django python manage.py startapp camdo
+> - Kiểm tra app đã tạo chưa : ls django_app
+<img width="1272" height="92" alt="image" src="https://github.com/user-attachments/assets/87c8bf05-ad93-43bc-9dce-102d150cd0b5" />
+
+- Sửa settings.py để kết nối MariaDB
+> - Mở file: sudo nano django_app/config/settings.py
+> - tìm đoạn Tìm đoạn này
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
+}  và thay thành như trong ảnh
+<img width="752" height="938" alt="image" src="https://github.com/user-attachments/assets/f6a39887-150f-4ced-abd8-d0288cdfecd2" />
+
+- Khai báo app camdo
+> - Trong cùng file settings.py
+   > - Tìm: INSTALLED_APPS = [ . và Thêm dòng: 'camdo',
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/556fdce7-d2a1-465f-9f17-f51b29088ca4" />
+- sau đó Restart Django : docker compose restart django
+- Kiểm tra Django có lỗi không: sudo docker logs django_camdo
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/c2043c6a-67d4-4015-83f8-09046a296b16" />
+
+- tạo models.py
+Mở file: nano django_app/camdo/models.py
+<img width="767" height="923" alt="image" src="https://github.com/user-attachments/assets/0e62838d-277a-402b-bc3f-35d52cb439a5" />
+
+- tạo migration
+Chạy: docker compose exec django python manage.py makemigrations
+<img width="1232" height="157" alt="image" src="https://github.com/user-attachments/assets/dc2e90cd-8b9f-441f-98c0-6e4f6d4b5470" />
+
+- Sau đó migrate vào MariaDB: docker compose exec django python manage.py migrate
+<img width="1352" height="541" alt="image" src="https://github.com/user-attachments/assets/4bd77c4b-4087-4e6f-a51e-fb9c6f4bd97d" />
+
+
+
 
 
