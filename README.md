@@ -100,7 +100,40 @@ Chạy: docker compose exec django python manage.py makemigrations
 - Sau đó migrate vào MariaDB: docker compose exec django python manage.py migrate
 <img width="1352" height="541" alt="image" src="https://github.com/user-attachments/assets/4bd77c4b-4087-4e6f-a51e-fb9c6f4bd97d" />
 
+- ## Cấu hình Django Admin
+- Tạo tài khoản admin : docker compose exec django python manage.py createsuperuser
+<img width="1216" height="245" alt="image" src="https://github.com/user-attachments/assets/32f05e7b-0a16-4202-affb-8a5936dcd816" />
 
+- Đăng ký model vào admin
+> - Mở file: nano django_app/camdo/admin.py
+<img width="742" height="875" alt="image" src="https://github.com/user-attachments/assets/2ad78955-84ac-4b11-bd31-03d657158252" />
+
+- Restart Django: docker compose restart django
+- Truy cập Django Admin
+  > - Mở trình duyệt: http://localhost:8000/admin
+  > - Hoặc: http://IP_UBUNTU:8000/admin
+<img width="687" height="440" alt="image" src="https://github.com/user-attachments/assets/13b7c723-d601-456f-9b8c-2651a8a225b2" />
+- Sau khi login thành công
+> - KQ được trang admin, yêu cầu đăng nhập, vào trang admin: cho phép thêm sửa xoá dữ liệu các bảng
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/74afe113-a5e1-4596-ae9d-e062a077b959" />
+
+-  kiểm tra FK bằng PhpMyAdmin
+<img width="686" height="677" alt="image" src="https://github.com/user-attachments/assets/815c0b1d-5faa-4351-b2db-a7dcb8d9cf67" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0df37feb-1e20-4454-afb4-f459220da08a" />
+
+- Test FK hoạt động đúng
+- Thêm dữ liệu thử
+> - Thêm khách hàng
+<img width="690" height="786" alt="image" src="https://github.com/user-attachments/assets/bae38e31-9df1-4e2e-a0d5-afd7240416ee" />
+<img width="685" height="498" alt="image" src="https://github.com/user-attachments/assets/042676f4-a390-470b-9197-0aa4fa59a684" />
+
+> - Thêm tài sản
+<img width="681" height="832" alt="image" src="https://github.com/user-attachments/assets/157b05ce-156e-44c4-a173-8df7d6474438" />
+
+<img width="696" height="590" alt="image" src="https://github.com/user-attachments/assets/4ba19686-2bd1-489c-8e81-936bf97842b8" />
+
+> - Thêm hợp đồng cầm
+<img width="756" height="901" alt="image" src="https://github.com/user-attachments/assets/b255c4a2-4d82-405d-86c5-4dd6d7bccd24" />
 
 
 
