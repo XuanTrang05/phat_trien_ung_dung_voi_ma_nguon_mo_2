@@ -26,4 +26,26 @@ Hướng dẫn:
 - AI sẽ nói cần thêm file requirements.txt để cài các thư viện cho python (cài qua lệnh pip) => tạo file requirements.txt với nội dung tưng ứng, trong file này cũng comment được => comment xem thư viện nào dùng để làm gì
 - Sau mỗi lần sửa đỏi có thể phải chạy lệnh dạng : **docker compose exec TÊN_SERVICE_DJANGO_CỦA_BẠN python manage.py migrate** để tác động vào django (còn nhiều lệnh khác chứ ko luôn như này), để django thay đổi csdl hoặc thay đổi cấu hình.
 
-  
+## BÀI LÀM
+# 1. TỔ CHỨC CSDL CHO HỆ THỐNG QUẢN LÝ TIỆM CẦM ĐỒ: viết tay ra giấy, lấy điện thoại chụp lại, upload ảnh lên github (đã nói về các nghiệp vụ trên lớp, ghi bảng)
+
+# 2.
+- Khởi động docker
+  <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/3c29496f-0725-4019-a182-4e2aa9f46866" />
+
+- TẠO PROJECT
+ > - Tạo thư mục project -> tạo thư mục Django
+<img width="795" height="150" alt="image" src="https://github.com/user-attachments/assets/67a39984-7c9e-4c23-9ebe-adfcf242d4c7" />
+— TẠO DOCKERFILE
+   > - Dockerfile dùng để build container Django.
+Đi vào thư mục django_app : cd django_app
+Tạo file Dockerfile: sudo nano Dockerfile
+
+- TẠO requirements.txt
+> - Tạo file requirements.txt : sudo nano requirements.txt
+<img width="742" height="905" alt="image" src="https://github.com/user-attachments/assets/18a12588-1a89-41ee-970b-4884862e467a" />
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cc94bd43-9111-451b-b037-da4f03266a5b" />
+
+
+
