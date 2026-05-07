@@ -135,5 +135,35 @@ Chạy: docker compose exec django python manage.py makemigrations
 > - Thêm hợp đồng cầm
 <img width="756" height="901" alt="image" src="https://github.com/user-attachments/assets/b255c4a2-4d82-405d-86c5-4dd6d7bccd24" />
 
+- Template HTML + Jinja2 + View
+  > - Tạo thư mục templates
+      > - Đang ở: ~/camdo_project
+- chạy : mkdir -p django_app/templates
+- Tạo file home.html: nano django_app/templates/home.html
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d8f6f3c6-aeea-4263-b93b-43128e70102c" />
+
+- Tạo view home_page
+   > - Mở: sudo nano django_app/camdo/views.py
+<img width="760" height="542" alt="image" src="https://github.com/user-attachments/assets/245fa7db-d503-488b-8d0f-035c6a6b39c9" />
+
+- Tạo urls.py cho app
+   > - Tạo file: sudo nano django_app/camdo/urls.py
+<img width="702" height="392" alt="image" src="https://github.com/user-attachments/assets/769350e2-20db-48fc-8082-bb77a3d3a45b" />
+
+- Sửa URL chính
+   > - Mở: sudo nano django_app/config/urls.py
+  <img width="752" height="692" alt="image" src="https://github.com/user-attachments/assets/0bb2fcb4-b9b2-4520-9d55-c8dfbefddfcb" />
+
+- sau đó Restart Django: docker compose restart django
+- Mở website
+Vào: http://localhost:8000 - > sẽ thấy: Danh sách con nợ chưa trả
+<img width="707" height="468" alt="image" src="https://github.com/user-attachments/assets/f00de2c0-89dc-4c03-90bf-980e7743160f" />
+
+- Kiểm tra dữ liệu bằng phpMyAdmin
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5b81a196-428b-411a-b4cd-3eed5bc7df55" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/90363eab-b10b-4c66-a128-2f35403c14ae" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/49a3412e-a1b4-4019-9adb-dcd58fee9b1b" />
+- Public website bằng Cloudflare Tunnel
+- 
 
 
