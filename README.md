@@ -28,6 +28,10 @@ Hướng dẫn:
 
 ## BÀI LÀM
 # 1. TỔ CHỨC CSDL CHO HỆ THỐNG QUẢN LÝ TIỆM CẦM ĐỒ: viết tay ra giấy, lấy điện thoại chụp lại, upload ảnh lên github (đã nói về các nghiệp vụ trên lớp, ghi bảng)
+<img width="1920" height="2560" alt="image" src="https://github.com/user-attachments/assets/969d68e7-ab47-4ad3-9e15-00fab9864b04" />
+
+
+<img width="1920" height="2560" alt="image" src="https://github.com/user-attachments/assets/10d26095-cec8-4f2b-a4f0-fee2c2a510cb" />
 
 # 2.
 - Khởi động docker
