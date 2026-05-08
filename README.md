@@ -175,7 +175,6 @@ Vào: http://localhost:8000 - > sẽ thấy: Danh sách con nợ chưa trả
 Chạy: docker exec -it cloudflared sh
 - Sau đó trong container: cloudflared tunnel --url http://host.docker.internal:8000
 - Sửa file: nano django_app/config/settings.py
-<img width="371" height="137" alt="image" src="https://github.com/user-attachments/assets/fa04c2c6-a909-4011-8926-cc05146ca045" />
 sau khi sửa xong Restart Django container: docker restart django_camdo
 
 # test 
